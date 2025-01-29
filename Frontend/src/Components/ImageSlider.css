@@ -1,0 +1,13 @@
+/* ImageSlider.css */
+.image-slider {
+    z-index: -10;
+    /* Add any other custom CSS styles here */
+    background-color: rgb(166, 255, 0);
+  }
+  
+  .image-slider img {
+    /* Add custom styles for the images here */
+    width: 100%;
+    height: 100%;
+  }
+  
