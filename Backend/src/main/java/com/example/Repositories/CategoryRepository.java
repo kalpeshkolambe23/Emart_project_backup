@@ -15,7 +15,7 @@ import com.example.Models.Product;
 public interface CategoryRepository extends JpaRepository<Product, Integer> {
 
 	
-	@Query(value = "select * from Product p where p.CategoryID = :cat_id", nativeQuery = true)
+	@Query(value = "select * from Product p where p.categoryID = :cat_id", nativeQuery = true)
 	List<Product> findProductsByCategoryId(@Param("cat_id") int cat_id);
 
 

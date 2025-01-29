@@ -3,7 +3,6 @@ package com.example.Models;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -19,6 +18,7 @@ public class Categories {
     private int CategoryID;
     private String CategoryName;
     private Set<Product> CategoryProduct;
+    
 
     public Categories(int categoryID, String categoryName) {
         super();
@@ -56,9 +56,20 @@ public class Categories {
     public void setCategoryProduct(Set<Product> categoryProduct) {
         CategoryProduct = categoryProduct;
     }
+    
+    
+//    @OneToMany(mappedBy = "subcategory", cascade = CascadeType.ALL)
+//    public Set<Product> getSubcategoryProduct() {
+//		return SubcategoryProduct;
+//	}
+//
+//	public void setSubcategoryProduct(Set<Product> subcategoryProduct) {
+//		SubcategoryProduct = subcategoryProduct;
+//	}
 
-    @Override
+	@Override
     public String toString() {
-        return "Categories [CategoryID=" + CategoryID + ", CategoryName=" + CategoryName + "]";
+        return "Categories [CategoryID=" + CategoryID + ", CategoryNam"
+        		+ "e=" + CategoryName + "]";
     }
 }
